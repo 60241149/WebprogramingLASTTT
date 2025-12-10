@@ -3,7 +3,6 @@ body {
   background: #000;
   font-family: "Pretendard", sans-serif;
 }
-
 .tomato10-parent {
   width: 100%;
   height: 100vh;
@@ -27,7 +26,7 @@ body {
 }
 .tomato7 {
   position: absolute;
-  top: 417.46px;
+  top: 317.46px;
   left: 579.55px;
   border-radius: 82px;
   width: 1019px;
@@ -37,7 +36,7 @@ body {
 }
 .tomato3 {
   position: absolute;
-  top: 688px;
+  top: 508px;
   left: -83px;
   border-radius: 82px;
   width: 830.2px;
@@ -58,7 +57,7 @@ body {
 .tomato6 {
   position: absolute;
   top: -109px;
-  left: 525px;
+  left: 425px;
   border-radius: 133px;
   width: 739.8px;
   height: 743.4px;
@@ -77,7 +76,7 @@ body {
 }
 .tomato8 {
   position: absolute;
-  top: -8px;
+  top: 10px;
   left: 1125px;
   border-radius: 118.5px;
   width: 164.5px;
@@ -87,7 +86,7 @@ body {
 }
 .tomato5 {
   position: absolute;
-  top: 723px;
+  top: 700px;
   left: 590px;
   border-radius: 118.5px;
   width: 164.5px;
@@ -107,7 +106,7 @@ body {
 }
 .tomato2 {
   position: absolute;
-  top: 524px;
+  top: 424px;
   left: 46px;
   border-radius: 118.5px;
   width: 237px;
@@ -205,7 +204,6 @@ body {
   object-fit: cover;
   flex-shrink: 0;
 }
-
 .div3 {
   position: absolute;
   top: 530px;
@@ -243,7 +241,6 @@ body {
     transform: translate(0, 0) rotate(0deg);
   }
 }
-
 @keyframes float2 {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -261,7 +258,6 @@ body {
     transform: translate(0, 0) rotate(0deg);
   }
 }
-
 @keyframes float3 {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -308,4 +304,59 @@ body {
 }
 .tomato2 {
   animation: float1 7.2s ease-in-out infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+.tomato-images img {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.tomato-images.show img {
+  opacity: 1;
+}
+.tomato-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.text-layer {
+  position: relative;
+  z-index: 10;
+}
+
+.tomato-festa {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.tomato-festa:hover:not(.active) {
+  animation: neonBlink 0.8s infinite alternate;
+}
+
+@keyframes neonBlink {
+  0% {
+    text-shadow: 0 0 6px rgba(255, 70, 70, 0.4), 0 0 10px rgba(255, 60, 60, 0.3),
+      0 0 20px rgba(255, 40, 40, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(255, 90, 90, 0.9),
+      0 0 22px rgba(255, 50, 50, 0.8), 0 0 35px rgba(255, 0, 0, 0.7);
+  }
+}
+
+.tomato-festa.active {
+  color: #ff2b2b !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+body {
+  cursor: url("asset/cursor.png"), auto;
 }
